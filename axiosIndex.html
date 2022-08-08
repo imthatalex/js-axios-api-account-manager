@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUD Application</title>
+        <link rel="stylesheet" type="text/css" href="/CSS/main.css">
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+
+            <div id="getValuesContainer">
+                <div class="row">
+                    <div class="col">
+                        <div id="googleAccountName"></div>
+                        <div class="title"> Select Account by Google ID</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input id="idSelected" placeholder="Example: 1"
+                            type="number">
+                        <button onclick="getInitialOptionValues()">Submit</button>
+                        <button onclick="clearOptionValues()">Clear</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="displayValuesContainer">
+                <div class="row">
+                    <div class="col">
+                        <div id="googleId" class="title"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="title">PLATFORM NAME</div>
+                    </div>
+                    <div class="col">
+                        <div class="title">OPTION NAME</div>
+                    </div>
+                    <div class="col">
+                        <div class="title">OPTION VALUE</div>
+                    </div>
+                    <div class="col">
+                        <div class="title">DOT DIGITAL ID</div>
+                    </div>
+                    <div class="col">
+                        <div class="title">ROOFTOP ID</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div id="platformName"></div>
+                    </div>
+                    <div class="col">
+                        <div id="optionName"></div>
+                    </div>
+                    <div class="col">
+                        <div id="optionValue"></div>
+                    </div>
+                    <div class="col">
+                        <div id="dotDigitalId"></div>
+                    </div>
+                    <div class="col">
+                        <div id="rooftopId"></div>
+                    </div>
+                </div>
+            </div>
+
+            <section>
+                <div id="createValuesContainer" class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Create Account Options</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-lg-2">
+                            <input
+                                placeholder="Platform Name"
+                                type="textarea"
+                                id="createPlatformNameInput">
+                        </div>
+                        <div class="col col-lg-2">
+                            <input
+                                placeholder="Option Name"
+                                type="textarea"
+                                id="createOptionNameInput">
+                        </div>
+                        <div class="col col-lg-2">
+                            <input
+                                placeholder="Option Value"
+                                type="textarea"
+                                id="createOptionValueInput">
+                        </div>
+                        <div class="col col-lg-2">
+                            <input
+                                placeholder="Google ID"
+                                type="number"
+                                id="createGoogleIdInput">
+                        </div>
+                        <div class="col col-lg-2">
+                            <input
+                                placeholder="Dot Digital ID"
+                                type="number"
+                                id="createDotDigitalIdInput">
+                        </div>
+                        <div class="col col-lg-2">
+                            <button class="radius"
+                                onclick="createOptionValues()">CREATE</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="updateValuesContainer" class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Update Option Name & Value</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-lg-2">
+                            <input
+                                placeholder="Rooftop ID"
+                                type="number"
+                                id="updateRooftopIdInput">
+                        </div>
+                        <div class="col col-lg-2">
+                            <input
+                                placeholder="Google ID"
+                                type="number"
+                                id="updateGoogleIdInput">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-lg-2">
+                            <input
+                                placeholder="Platform Name"
+                                type="textarea"
+                                id="updatePlatformNameInput">
+                        </div>
+                        <div class="col col-lg-2">
+                            <input
+                                placeholder="Option Value"
+                                type="textarea"
+                                id="updateOptionValueInput">
+                        </div>
+                        <div class="col col-lg-2">
+                            <button onclick="updateOptionValues()"
+                                class="radius">UPDATE</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="deleteValuesContainer" class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Delete Values</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-lg-2">
+                            <input
+                                placeholder="Rooftop ID"
+                                type="textarea"
+                                id="deleteRooftopIdInput">
+                        </div>
+                        <div class="col col-lg-2">
+                            <input
+                                placeholder="Google ID"
+                                type="textarea"
+                                id="deleteGoogleIdInput">
+                        </div>
+                        <div class="col col-lg-2">
+                            <button onclick="deleteOptionValues()"
+                                class="radius">DELETE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="/Axios/AxiosMain.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </body>
+</html>
