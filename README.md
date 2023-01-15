@@ -23,14 +23,23 @@ Before using this program, you will need to have a basic understanding of CRUD o
 ```
 3. Update the headers variable with the necessary authentication information for the API
 ```javascript
-    let getOptionValuesUrl = 'https://services.metricsamsi.com/v1.0/dealers/Options/' + idSelected + '?apiKey=81c14de2-6891-461b-9ea6-3ed218675b8f';
-
-        axios.get(getOptionValuesUrl, { validateStatus: () => true })
-            .then(response => examineResponse(response))
-            .then(data => displayOptionValues(data))
+    function examineResponse(response) {
+        if (response.status == 200) {
+            console.log('Initial Values Values Received');
+            idSelectedInput.value = '';
+            return response.data;
+        }
+        else if (response.status == 403) {
+            console.log('Initial Values Forbidden')
+            alert('Google ID is Locked');
+        }
+        else if (response.status == 500) {
+            console.log('Initial Values Server Error')
+            alert('500 Server Error');
+        }
     }
 ```
-4. Use the provided CRUD functions (createAccount, readAccount, updateAccount, deleteAccount) to interact with the API
+4. Use the provided CRUD functions through the GUI (createAccount, readAccount, updateAccount, deleteAccount) to interact with the API
 
 
 ### Features
