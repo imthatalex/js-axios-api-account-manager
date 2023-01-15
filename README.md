@@ -39,7 +39,8 @@ Before using this program, you will need to have a basic understanding of CRUD o
         }
     }
 ```
-4. Use the provided CRUD functions through the GUI (createAccount, readAccount, updateAccount, deleteAccount) to interact with the API
+4. Use the provided CRUD functions (createAccount, readAccount, updateAccount, deleteAccount) to interact with the API
+5. Open http://localhost:3000 in your browser to use the GUI
 
 
 ### Features
@@ -53,5 +54,5 @@ Before using this program, you will need to have a basic understanding of CRUD o
 - Axios - JavaScript library for making HTTP requests
 
 ### Acknowledgments
-Axios documentation for guidance on making HTTP requests
+[Axios documentation](https://axios-http.com/docs/intro) for guidance on making HTTP requests
 Please note, the code provided in this file is just an example and it may not work if you run it, as it needs to be adapted to the specific API endpoint you want to use with it.
