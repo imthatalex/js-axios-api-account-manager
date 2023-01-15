@@ -26,10 +26,10 @@ Due to it being a powerful and feature-rich library that offers a simpler and mo
 
 # Use
 
-Request the initial values from the API (API Key no longer available) using Axios
+Request the initial values from the ID given from the selected API using Axios
 
 ```javascript
-let getOptionValuesUrl = 'https://services.metricsamsi.com/v1.0/dealers/Options/' + idSelected + '?apiKey=81c14de2-6891-461b-9ea6-3ed218675b8f';
+let getOptionValuesUrl = 'https://example.123.com/v1.0/example/example/' + idSelected + '?apiKey=81c14de2-6891-461b-9ea6-3ed218675b8f';
 
         axios.get(getOptionValuesUrl, { validateStatus: () => true })
             .then(response => examineResponse(response))
