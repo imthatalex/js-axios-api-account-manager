@@ -4,7 +4,7 @@
 
 # Originally an Assignment. 
 
-Task : Test XMLHTTPRequests(XHR) against JavaScript libraries & Use the given API to fetch Google Accounts and perform basic CRUD operations.
+Task : Test XMLHTTPRequests(XHR) against JavaScript libraries & Use the given API (No longer Active) to fetch Google Accounts and perform basic CRUD operations.
 
 Libraries Chosen
 - Axios
@@ -26,7 +26,7 @@ Due to it being a powerful and feature-rich library that offers a simpler and mo
 
 # Use
 
-Originally used with an API that fetched data using an ID, insert the selected ID from the API you're using to fetch the data. Can be be re-written to just use a link without an ID.
+Originally used with an API that fetched data using an ID, insert the selected ID from the API you're using to fetch the data.
 
 ```javascript
 let getOptionValuesUrl = 'https://example.com/example' + idSelected + '?apiKey=12c34de5-6789-012b-3ea4-5ed678901b2f';
