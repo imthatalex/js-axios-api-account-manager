@@ -13,21 +13,7 @@ Before using this program, you will need to have a basic understanding of CRUD o
 ### Using the Program
 1. Clone or download the repository
 2. Update the getOptionValuesUrl variable in the code with the endpoint of the API you are using
-3. Update the headers variable with the necessary authentication information for the API
-4. Use the provided CRUD functions (createAccount, readAccount, updateAccount, deleteAccount) to interact with the API
-
 ```javascript
-function getInitialOptionValues() {
-
-    let idSelected = '';
-    idSelected = idSelectedInput.value;
-
-    if (!idSelected) {
-        alert('Please Select an ID');
-    }
-
-    else {
-
     let getOptionValuesUrl = 'https://services.metricsamsi.com/v1.0/dealers/Options/' + idSelected + '?apiKey=81c14de2-6891-461b-9ea6-3ed218675b8f';
 
         axios.get(getOptionValuesUrl, { validateStatus: () => true })
@@ -35,6 +21,17 @@ function getInitialOptionValues() {
             .then(data => displayOptionValues(data))
     }
 ```
+3. Update the headers variable with the necessary authentication information for the API
+```javascript
+    let getOptionValuesUrl = 'https://services.metricsamsi.com/v1.0/dealers/Options/' + idSelected + '?apiKey=81c14de2-6891-461b-9ea6-3ed218675b8f';
+
+        axios.get(getOptionValuesUrl, { validateStatus: () => true })
+            .then(response => examineResponse(response))
+            .then(data => displayOptionValues(data))
+    }
+```
+4. Use the provided CRUD functions (createAccount, readAccount, updateAccount, deleteAccount) to interact with the API
+
 
 ### Features
 - Uses JavaScript and the axios library for making API calls
