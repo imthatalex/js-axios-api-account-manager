@@ -1,44 +1,31 @@
+# API Account Manager
 
+This program was originally intended to fetch accounts from a specific API using an ID and perform basic CRUD operations such as create, read, update and delete these accounts. The original API is no longer available, but the code can still be used with any API that uses an ID for retrieving data.
 
+### Getting Started
+Before using this program, you will need to have a basic understanding of CRUD operations and how to make API calls using JavaScript. You will also need to have an API endpoint that uses an ID to retrieve data.
 
+### Prerequisites
+- Knowledge of CRUD operations
+- Understanding of API calls and authentication methods
+- Access to an API endpoint that uses an ID to retrieve data
 
+### Using the Program
+1. Clone or download the repository
+2. Update the apiUrl variable in the code with the endpoint of the API you are using
+3. Update the headers variable with the necessary authentication information for the API
+4. Use the provided CRUD functions (createAccount, readAccount, updateAccount, deleteAccount) to interact with the API
 
-# Purpose: 
-## Test XMLHTTPRequests(XHR) against JavaScript libraries & Use the given API (No longer Active) to fetch Google Accounts and perform basic CRUD operations.
+### Features
+- Uses JavaScript and the axios library for making API calls
+- Uses an ID to retrieve data from the API
+- Includes functions for performing basic CRUD operations
+- Can be easily adapted to work with any API that uses an ID for retrieving data
 
-Libraries Chosen
-- Axios
-- Fetch
+### Built With
+- JavaScript
+- Axios - JavaScript library for making HTTP requests
 
-
-## Axios vs Fetch vs XHR
-## Syntax: 
-Fetch API uses the JavaScript fetch() function, and requires more boilerplate code. While XHR requires you to manually create the request object and set up event listeners for handling the response. Axios has a simpler and more consistent syntax, making it easier to use.
-
-## Robust Error Handling: 
-Fetch handles errors at the individual request level, with Axios, you can catch errors globally or at the request level. XHR overall has a more complex error handling mehcanism. 
-
-## Request Cancellation: 
-Axios allows you to cancel a request while it is in progress, which is not possible with the Fetch API or XHR.
-
-## Decision : Axios
-Due to it being a powerful and feature-rich library that offers a simpler and more consistent syntax, robust error handling, request cancellation, and a small file size. Axios seems like the best choice, it's also compatible with most of the browser and Nodejs, which makes it a good option for web applications.
-
-# Use
-
-Originally used with an API that fetched data using an ID, insert the selected ID from the API you're using to fetch the data.
-
-```javascript
-let getOptionValuesUrl = 'https://example.com/example' + idSelected + '?apiKey=12c34de5-6789-012b-3ea4-5ed678901b2f';
-
-        axios.get(getOptionValuesUrl, { validateStatus: () => true })
-            .then(response => examineResponse(response))
-            .then(data => displayOptionValues(data))
-    }
-```
-
-Use the GUI to execute the CRUD operations
-
-
-
-
+### Acknowledgments
+Axios documentation for guidance on making HTTP requests
+Please note, the code provided in this file is just an example and it may not work if you run it, as it needs to be adapted to the specific API endpoint you want to use with it.
