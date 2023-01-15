@@ -1,2 +1,36 @@
-this was initially an assignment, it used an api key fetched by swagger, purpose was intended to update google accounts associated with a dealership's database.
-the api key no longer exists as the assignment is over, but basically you would fetch the api key and then you could manipulate the accounts using crud operations.
+# Originally an Assignment. 
+
+Task : Test XMLHTTPRequests(XHR) against JavaScript libraries & Use the given API to fetch Google Accounts and perform basic CRUD operations.
+
+Libraries Chosen
+- Axios
+- Fetch
+
+
+## Axios vs Fetch vs XHR
+## Syntax: 
+Fetch API uses the JavaScript fetch() function, and requires more boilerplate code. While XHR requires you to manually create the request object and set up event listeners for handling the response. Axios has a simpler and more consistent syntax, making it easier to use.
+
+## Robust Error Handling: 
+Fetch handles errors at the individual request level, with Axios, you can catch errors globally or at the request level. XHR overall has a more complex error handling mehcanism. 
+
+## Request Cancellation: 
+Axios allows you to cancel a request while it is in progress, which is not possible with the Fetch API or XHR.
+
+## Decision : Axios
+Due to it being a powerful and feature-rich library that offers a simpler and more consistent syntax, robust error handling, request cancellation, and a small file size. Axios seems like the best choice, it's also compatible with most of the browser and Nodejs, which makes it a good option for web applications.
+
+# Use
+
+
+
+
+
+
+
+
+
+
+
+
+
