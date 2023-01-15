@@ -1,3 +1,7 @@
+
+
+
+
 # Originally an Assignment. 
 
 Task : Test XMLHTTPRequests(XHR) against JavaScript libraries & Use the given API to fetch Google Accounts and perform basic CRUD operations.
@@ -22,14 +26,18 @@ Due to it being a powerful and feature-rich library that offers a simpler and mo
 
 # Use
 
+Request the initial values from the API (API Key no longer available) using Axios
 
+```
+let getOptionValuesUrl = 'https://services.metricsamsi.com/v1.0/dealers/Options/' + idSelected + '?apiKey=81c14de2-6891-461b-9ea6-3ed218675b8f';
 
+        axios.get(getOptionValuesUrl, { validateStatus: () => true })
+            .then(response => examineResponse(response))
+            .then(data => displayOptionValues(data))
+    }
+```
 
-
-
-
-
-
+Use the GUI to execute the CRUD operations
 
 
 
