@@ -26,10 +26,10 @@ Due to it being a powerful and feature-rich library that offers a simpler and mo
 
 # Use
 
-Request the initial values from the ID given from the selected API using Axios
+Originally used with an API that fetched data using an ID, insert the selected ID from the API you're using to fetch the data. Can be be re-written to just use a link without an ID.
 
 ```javascript
-let getOptionValuesUrl = 'https://example.123.com/v1.0/example/example/' + idSelected + '?apiKey=81c14de2-6891-461b-9ea6-3ed218675b8f';
+let getOptionValuesUrl = 'https://example.com/example' + idSelected + '?apiKey=12c34de5-6789-012b-3ea4-5ed678901b2f';
 
         axios.get(getOptionValuesUrl, { validateStatus: () => true })
             .then(response => examineResponse(response))
