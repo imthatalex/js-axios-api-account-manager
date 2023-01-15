@@ -3,7 +3,8 @@
 
 
 
-# Task : Test XMLHTTPRequests(XHR) against JavaScript libraries & Use the given API (No longer Active) to fetch Google Accounts and perform basic CRUD operations.
+# Purpose: 
+## Test XMLHTTPRequests(XHR) against JavaScript libraries & Use the given API (No longer Active) to fetch Google Accounts and perform basic CRUD operations.
 
 Libraries Chosen
 - Axios
