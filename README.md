@@ -2,16 +2,13 @@
 
 This program was originally intended to fetch accounts from a specific API using an ID and perform basic CRUD operations such as create, read, update and delete these accounts. The original API is no longer available, but the code can still be used with any API that uses an ID for retrieving data.
 
-### Getting Started
-Before using this program, you will need to have a basic understanding of CRUD operations and how to make API calls using JavaScript. You will also need to have an API endpoint that uses an ID to retrieve data.
 
 ### Prerequisites
-- Knowledge of CRUD operations
 - Understanding of API calls and authentication methods
 - Access to an API endpoint that uses an ID to retrieve data
 
 ### Using the Program
-1. Clone or download the repository
+1. Clone or Download the Repo.
 2. Update the getOptionValuesUrl variable in the code with the endpoint of the API you are using
 ```javascript
     let getOptionValuesUrl = 'https://services.metricsamsi.com/v1.0/dealers/Options/' + idSelected + '?apiKey=81c14de2-6891-461b-9ea6-3ed218675b8f';
@@ -39,8 +36,8 @@ Before using this program, you will need to have a basic understanding of CRUD o
         }
     }
 ```
-4. Use the provided CRUD functions (createAccount, readAccount, updateAccount, deleteAccount) to interact with the API
-5. Open http://localhost:3000 in your browser to use the GUI
+4. Open http://localhost:3000 in your browser to use the GUI & interact with the API.
+
 
 
 ### Features
